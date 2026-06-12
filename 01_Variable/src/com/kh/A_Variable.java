@@ -1,0 +1,76 @@
+package com.kh;
+
+public class A_Variable {
+
+	public static void main(String[] args) {
+		
+		//method1();
+		method2();
+		
+	}
+	
+	public static void method2() {
+		
+		System.out.println("method2() start ....");
+		
+		// 1. 논리형 (boolean) : true 또는 false 을 저장하는 자료형
+		boolean isTrue = true;
+		boolean isFalse = false;
+		
+		System.out.println("isTrue의 값 : " + isTrue);
+		
+		isFalse = -10 > 2 + 3; // -10 > 5
+		System.out.println("-10 > 2 + 3 의 결과 : " + isFalse);
+		
+		// -------------------------
+		// 2. 숫자 (정수형, 실수형)
+		// 2-1) 정수형 : 딱 떨어지는 수. 소숫점 포함하지 않음!
+		//      byte(1B) / short(2B) / int(4B) / long(8B)
+		
+		// byte 자료형 변수 bNum을 선언하고 저장할 수 있는 범위 내의 최소값 대입(저장)
+		byte bNum = -128;  // -128 ~ 127
+		
+		// 1000 값을 bNum에 저장할 수 있을까?
+		// bNum = 1000; // -> byte 범위를 벗어나기 때문에 오류 발생!
+		
+		long lNum = 1000;		// 1000 -> (int) --> (long)
+		long lNum2 = 1000l;		// 1000l -> (long)
+		// 2-2) 실수형 : 소숫점이 포함된 숫자
+		//      float(4B) / double(8B, 8byte)
+		
+		// float 자료형 변수 fNum에 0.0을 저장
+		float fNum = 0.0f;
+	}
+	
+	
+	
+	public static void method1() {
+		// 월급 = 시급 x 근무시간 x 근무일수
+		// * 출력 형식 : xxx : 0000원
+		// * 2026년 최저시급 : 10320원
+		
+		//  시급 + 200원
+		System.out.println("홍길동 : " + 10520*8*5 + "원");
+		System.out.println("아이유 : " + 10520*6*5 + "원");
+		System.out.println("나루토 : " + 10520*10*3 + "원");
+		System.out.println("짱구 : " + 10520*4*7 + "원");
+		System.out.println("루피 : " + 10520*6*10 + "원");
+		
+		// 변수를 사용하여 시급에 대한 값을 관리해보자.
+		// 변수 선언 => 자료형 변수명;
+		int minWage = 10820;
+		// 시급 + 500원
+		// minWage = minWage + 500;
+		
+		System.out.println("홍길동 : " + minWage*8*5 + "원");
+		System.out.println("아이유 : " + minWage*6*5 + "원");
+		System.out.println("나루토 : " + minWage*10*3 + "원");
+		System.out.println("짱구 : " + minWage*4*7 + "원");
+		System.out.println("루피 : " + minWage*6*10 + "원");
+	}
+
+}
+
+
+
+
