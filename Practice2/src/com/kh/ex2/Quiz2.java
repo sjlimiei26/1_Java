@@ -8,8 +8,8 @@ public class Quiz2 {
 	 */
 	public static void main(String[] args) {
 		// 정수형 변수 a, b에 각각 10, 20 저장
-		int a = 15;
-		int b = 33;
+		int a = 10;
+		int b = 20;
 		System.out.printf("교환 전: a = %d, b = %d\n", a, b);
 
 		// a의 값과 b의 값을 교환
