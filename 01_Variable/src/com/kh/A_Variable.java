@@ -39,7 +39,43 @@ public class A_Variable {
 		//      float(4B) / double(8B, 8byte)
 		
 		// float 자료형 변수 fNum에 0.0을 저장
-		float fNum = 0.0f;
+		float fNum = 0.0f;		// 0.0 -> (double) --> x
+								// 0.0f -> (float)
+		
+		// double 자료형 변수 dNum에 0.0을 저장
+		double dNum;
+		
+		dNum = 0.0;
+		// --------------------
+		// 3. 문자형 (char, String)
+		// 3-1) 문자 : char (2B)
+		
+		// 'a' 라는 값을 저장하는 변수 ch 선언
+		char ch = 'a';
+		
+		// '김' 이라는 값을 변수에 저장
+		char kim = '김';
+		
+		// 3-2) 문자열 : String (참조자료형)
+		
+		// 문자열 변수 str 선언 -> 자료형 변수명;
+		String str;
+		
+		// str 변수에 "안녕하세요 ~" 저장 (대입,할당)
+		str = "안녕하세요 ~~~~";
+		
+		// * 문자열 데이터의 길이 : 변수명.length()
+		System.out.println("str 데이터 길이 : " + str.length());
+		// -------------------
+		
+		// 상수 : 고정된 값, 변하지 않는 값을 저장하는 공간(변수)
+		// * final 자료형 변수명;
+		
+		// 최대 이용자 수를 저장하기 위한 상수 선언 : max users
+		final int MAX_USERS;
+		MAX_USERS = 24;
+		// ....
+		// MAX_USERS = 26; // 재할당 불가. 저장 후 다시 저장할 수 없음!
 	}
 	
 	
