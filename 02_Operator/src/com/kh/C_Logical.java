@@ -29,7 +29,8 @@ public class C_Logical {
 	 */
 
 	public static void main(String[] args) {
-		
+		// method1();
+		method2();
 	}
 	
 	public static void method1() {
@@ -40,11 +41,33 @@ public class C_Logical {
 		int num = sc.nextInt();
 
 		// => true 또는 false 로 결과 출력
-		System.out.println("입력된 값은 1 ~ 10 사이의 값인가? ");
+		boolean result = (num >= 1) && (num <= 10);
+		// 1 <= num && num <= 10
+		// 1 <= num && 10 >= num
+		System.out.println("입력된 값은 1 ~ 10 사이의 값인가? " + result);
 
-		System.out.println("입력된 값은 1 ~ 10 범위를 벗어나는가? ");
+		boolean result2 = num < 1 || num > 10;
+		System.out.println("입력된 값은 1 ~ 10 범위를 벗어나는가? " + result2);
 	}
 
+	public static void method2() {
+		// 입력받은 문자가 소문자인지 확인
+		//  'a' : 97, 'z': 122
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자 입력 : ");
+		String str = sc.next();		// -> "a" , "b" ..., "apple"
+		
+		char ch = str.charAt(0);	// "a" -> 'a', "samsung" -> 's'
+		
+		boolean result = ch >= 97 && ch <= 122; 
+		boolean result2 = ch >= 'a' && ch <= 'z';
+		
+		System.out.println("입력 받은 값이 소문자인가? " + result);
+		System.out.println("입력 받은 값이 소문자인가? " + result2);
+		
+	}
+	
 }
 
 
