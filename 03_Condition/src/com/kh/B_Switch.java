@@ -87,6 +87,15 @@ public class B_Switch {
 			System.out.println("n1 - n2 = " + (n1 - n2));
 			break;
 		// TODO: '*', '/', '%' 추가해보자! -> 수업 종료(18시) 전까지 이메일로 제출
+		case '*':
+			System.out.println("n1 * n2 = " + (n1 * n2));
+			break;
+		case '/':
+			System.out.println("n1 / n2 = " + (n1 / n2));
+			break;
+		case '%':
+			System.out.println("n1 % n2 = " + (n1 % n2));
+			break;				
 		default:
 			System.out.println("입력이 잘못되었습니다.");
 			break;
