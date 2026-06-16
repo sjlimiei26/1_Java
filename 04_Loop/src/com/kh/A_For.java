@@ -172,6 +172,46 @@ public class A_For {
 			}
 		}
 		*/
+
+		System.out.println("===== 구구단 (2단 ~ 9단) =====");
+
+		for (int dan=2; dan<10; dan++) {
+
+			for (int i=1; i<10; i++) {
+
+				System.out.println(dan + " x " + i + " = " + (dan*i));
+				// System.out.printf("%d x %d = %d\n", dan, i, dan*i);
+
+			}
+
+			System.out.println();
+
+		}		
+	}
+
+	public static void method6() {
+		/*
+		 2단 ~ 9단까지 가로로 출력
+
+		 2 x 1 = 2		3 x 1 = 3		4 x 1 = 4 ...
+		 2 x 2 = 4		3 x 2 = 6		4 x 2 = 8 ...
+		 ...
+		 2 x 9 = 18		3 x 9 = 27		4 x 9 = 36 ...
+		*/
+
+		System.out.println("===== 구구단 (2단 ~ 9단) =====");
+
+		for (int i=1; i<10; i++) {
+
+			for (int dan=2; dan<10; dan++) {
+
+				System.out.printf("%d x %d = %2d\t", dan, i, dan*i);
+
+			}
+
+			System.out.println();
+
+		}
 	}
 }
 
