@@ -13,7 +13,8 @@ public class C_Branch {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		method1();
+		// method1();
+		method2();
 	}
 	
 	public static void method1() {
@@ -33,6 +34,25 @@ public class C_Branch {
 		}
 	}
 
+	public static void method2() {
+		// 1부터 100까지의 정수 중 3의 배수이거나 5의 배수를 제외한 총 합 구하기
+		
+		// * 1부터 100까지의 총 합 구하기
+		// - 초기식 : int i = 1;
+		// - 증감식 : i++;
+		// - 조건식 : i <= 100
+		int sum = 0;
+		for(int i=1; i<=100; i++) {
+			// 3의 배수이거나 5의 배수일 때 더하지 않음! -> 건너뛰기! (continue)
+			// 3의 배수 => 3으로 나눈 나머지가 0인 경우 : n % 3 == 0
+			if (i % 3 == 0 || i % 5 == 0) {
+				continue;
+			}
+			sum = sum + i;
+		}
+		
+		System.out.println(sum);
+	}
 }
 
 
