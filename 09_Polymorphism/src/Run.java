@@ -67,6 +67,7 @@ public class Run {
 			// 참조변수 instanceof 확인할타입(자식클래스명) : boolean
 			//  => true: 생성된 객체가 해당 타입으로 생성되어 있음!
 			//     false: 생성된 객체가 해당 타입이 아니다!
+						
 			if ( arr[i] instanceof CreditCardPay ) {
 				
 				String cardNumber = ( (CreditCardPay)arr[i] ).getCardNumber();
