@@ -6,8 +6,8 @@ public class Device /* extends Object */ {
 	protected String name;
 	protected int price;
 	
+	
 	public Device() {
-		
 	}
 	
 	public Device(String brand, String name, int price) {
