@@ -32,18 +32,19 @@ public class PosController {
 	 * View 단에서 전달 받은 고객 객체 주소 값을 
 	 * Controller의 customer 필드에 대입합니다.
 	 */
+	// 고객 정보 저장(추가)
 	public void insertCustomer(Customer c) {
 		customer = c;
 	}
-	
+	// 고객 정보 조회
 	public Customer getCustomerInfo() {
 		return customer;
 	}
-	
+	// 모든 결제 수단 정보 조회
 	public PaymentMethod[] selectAllMethods() {
 		return paymentList;
 	}
-	
+	// 결제 수단 검색 -> 결제명 기준으로 검색
 	public PaymentMethod[] searchMethod(String keyword) {
 		// * 결제 수단 정보 -> paymentList 필드에서 관리 (PaymentMethod[])
 		PaymentMethod[] result = new PaymentMethod[paymentList.length];
@@ -84,6 +85,10 @@ public class PosController {
 			return 1;
 		}
 		
+		// 기본 연령 미달인지 확인 => 고객 나이가 제한연령 이하인지 확인
+		if (customerAge <= methodMinAge) {
+			return 1;
+		}
 		
 		// 결제 수단이 카드 결제인 경우, 캐시백 여부 확인
 		if (method instanceof CardPayment && ((CardPayment)method).isHasCashback()) {
@@ -93,11 +98,7 @@ public class PosController {
 			
 			return 2;
 		}
-		//TODO::
-		// 기본 연령 미달인지 확인 => 고객 나이가 제한연령 이하인지 확인
-		if (customerAge <= methodMinAge) {
-			return 1;
-		}
+		
 		
 		return 0;
 	}
