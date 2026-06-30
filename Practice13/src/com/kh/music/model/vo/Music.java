@@ -34,7 +34,8 @@ public class Music implements Comparable<Music> {
 
 	@Override
 	public String toString() {
-		return "Music [title=" + title + ", singer=" + singer + "]";
+		//return "Music [title=" + title + ", singer=" + singer + "]";
+		return singer + " - " + title;
 	}
 
 	@Override

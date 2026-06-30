@@ -1,10 +1,14 @@
 package com.kh.music.run;
 
+import com.kh.music.view.MusicView;
+
 public class Run {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		MusicView view = new MusicView();
+		view.mainMenu();
+		
 	}
 
 }
