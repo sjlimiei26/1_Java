@@ -2,10 +2,10 @@ package com.kh.game;
 
 public class GameState {
 
-	private final String[] words = {"thread", "happy", "interface", "abstract", "smile"};
+	private final String[] WORDS = {"thread", "happy", "interface", "abstract", "smile"};
 	private int wordIndex = 0;
 	
-	private String targetWord = words[wordIndex++];
+	private String targetWord = WORDS[wordIndex++];
 	
 	private int remainingTime = targetWord.length();
 	
@@ -55,11 +55,11 @@ public class GameState {
 			System.out.println(" 정답입니다 !!");
 			score += 10;
 			
-			if(wordIndex == words.length) {
+			if(wordIndex == WORDS.length) {
 				wordIndex = 0;
 			}
 			
-			targetWord = words[wordIndex++];
+			targetWord = WORDS[wordIndex++];
 			remainingTime = targetWord.length();
 		} else {
 			System.out.println("오답 입니다 !! 다시 입력하세요.");
