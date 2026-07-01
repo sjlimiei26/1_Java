@@ -9,6 +9,18 @@ public class Run {
 		Thread t1 = new Thread( new Task1() );
 		t1.start();  // 스레드 실행!
 		
+		Thread t3 = new Thread( ()->{
+			// 스레드를 통해 실행할 내용
+			String threadName = Thread.currentThread().getName();
+			
+			System.out.println(threadName + "실행중####");
+		});
+		t3.start();
+		// 람다식 적용한 버전
+		//  => 람다식 적용 조건: 함수형 인터페이스 ( 추상 메소드가 단 1개인 인터페이스 )
+		
+		
+		
 		// * Thread 클래스를 상속시킨 스레드
 		Task2 t2 = new Task2();
 		t2.start();
